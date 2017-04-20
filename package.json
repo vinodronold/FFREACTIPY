@@ -6,9 +6,11 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "create-react-class": "^15.5.2",
     "material-components-web": "^0.9.1",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "prop-types": "^15.5.8",
+    "react": "^16.0.0-alpha.9",
+    "react-dom": "^16.0.0-alpha.9"
   },
   "scripts": {
     "start": "react-scripts start",

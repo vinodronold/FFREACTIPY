@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "enzyme": "^2.8.2",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "create-react-class": "^15.5.2",
     "material-components-web": "^0.9.1",
     "prop-types": "^15.5.8",

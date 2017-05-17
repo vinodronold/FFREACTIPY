@@ -1,19 +1,19 @@
 import React from 'react'
 import className from 'classnames'
-import { materialIcon } from '../const'
+import { materialIcon, clsToolbar } from '../../../constants/ui'
 import './Toolbar.css'
 
-const Toolbar = () => {
-    const _cls = "mdc-toolbar"
+const Toolbar = ({onClick}) => {
     return (
-        <header className={className([`${_cls}`], [`${_cls}--fixed`])}>
-            <div className={[`${_cls}__row`]}>
-                <section className={className([`${_cls}__section`], [`${_cls}__section--align-start`])}>
-                    <a className={materialIcon}>menu</a>
+        <header className={className([`${clsToolbar}`, `${clsToolbar}--fixed`])}>
+            <div className={`${clsToolbar}__row`}>
+                <section className={className([`${clsToolbar}__section`, `${clsToolbar}__section--align-start`])}>
+                    <a className={materialIcon} onClick={onClick}>menu</a>
+                    <span className={`${clsToolbar}__title`}></span>
                 </section>
-                <section className={className([`${_cls}__section`],
-                    [`${_cls}__section--align-end`],
-                    [`${_cls}__section--shrink-to-fit`])}>
+                <section className={className([`${clsToolbar}__section`],
+                    [`${clsToolbar}__section--align-end`],
+                    [`${clsToolbar}__section--shrink-to-fit`])}>
                     <a className={materialIcon} aria-label="Search" alt="Search">search</a>
                 </section>
             </div>

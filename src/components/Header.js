@@ -3,7 +3,7 @@ import Toolbar from './ui/Toolbar'
 
 const Header = () => {
     return (
-        <Toolbar />
+        <Toolbar  onClick={() => (console.log('clicked ! ! ! '))} />
     )
 }
 

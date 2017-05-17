@@ -1,0 +1,24 @@
+exports[`<Toolbar /> should match the Last Snapshot 1`] = `
+<header
+  className="mdc-toolbar mdc-toolbar--fixed">
+  <div
+    className="mdc-toolbar__row">
+    <section
+      className="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <a
+        className="material-icons">
+        menu
+      </a>
+    </section>
+    <section
+      className="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--shrink-to-fit">
+      <a
+        alt="Search"
+        aria-label="Search"
+        className="material-icons">
+        search
+      </a>
+    </section>
+  </div>
+</header>
+`;

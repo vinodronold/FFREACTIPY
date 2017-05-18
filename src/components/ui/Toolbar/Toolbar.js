@@ -9,7 +9,6 @@ const Toolbar = ({onClick}) => {
             <div className={`${clsToolbar}__row`}>
                 <section className={className([`${clsToolbar}__section`, `${clsToolbar}__section--align-start`])}>
                     <a className={materialIcon} onClick={onClick}>menu</a>
-                    <span className={`${clsToolbar}__title`}></span>
                 </section>
                 <section className={className([`${clsToolbar}__section`],
                     [`${clsToolbar}__section--align-end`],

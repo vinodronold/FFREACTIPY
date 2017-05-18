@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import Toolbar from './Toolbar'
-import { clsToolbar } from '../../../constants/ui'
+import { clsToolbar } from '../../constants/ui'
 
 describe('<Toolbar />', () => {
     const testToolbar = shallow(<Toolbar />)

@@ -1,10 +1,10 @@
-import { TOGGLE_DRAWER } from '../constants/ui'
+import { TOGGLE_DRAWER } from '../constants/actionTypes'
 import initialState from './initialState'
 
-export const drawer = (state = initialState.drawer, action) => {
+export const drawer = (state = initialState.ui, action) => {
     switch (action.type) {
         case TOGGLE_DRAWER:
-            return !state
+            return {...state, drawer: !state.drawer}
         default:
             return state
     }

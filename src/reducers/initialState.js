@@ -1,3 +1,5 @@
 export default {
-  drawer: false
+  ui: {
+    drawer: false
+  }
 };

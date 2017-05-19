@@ -1,5 +1,5 @@
 export default {
-  ui: {
-    drawer: false
+  drawer: {
+    isOpen: false
   }
 };

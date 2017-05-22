@@ -8,19 +8,15 @@ class Drawer extends PureComponent {
         this.node = null
         this.drawer = null
     }
-
-    componentDidMount() {
-        console.log(this.props.onMenuClick)
-        this.drawer = new MDCTemporaryDrawer(this.node)
-        this.drawer.open = this.props.drawer.isOpen
+    shouldComponentUpdate = (nextProps, nextState) => nextProps.drawer.isOpen
+    componentDidMount = () => (this.drawer = new MDCTemporaryDrawer(this.node))
+    componentDidUpdate = () => {
+        if (this.props.drawer.isOpen) {
+            this.drawer.open = this.props.drawer.isOpen
+            this.props.onMenuClick()
+        }
     }
-    componentDidUpdate() {
-        this.drawer.open = this.props.drawer.isOpen
-        //this.props.onMenuClick()
-    }
-    componentWillUnmount() {
-        this.drawer.destroy()
-    }
+    componentWillUnmount = () => this.drawer.destroy()
     render() {
         return (
             <aside className="mdc-temporary-drawer mdc-typography" ref={n => (this.node = n)}>

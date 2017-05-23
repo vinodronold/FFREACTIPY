@@ -1,17 +1,17 @@
 import React from 'react'
-import className from 'classnames'
+import classNames from 'classnames'
 import { materialIcon, clsToolbar } from '../../constants/ui'
 import './Toolbar.css'
 
 const Toolbar = ({ onMenuClick }) => {
     return (
-        <header className={className([`${clsToolbar}`, `${clsToolbar}--fixed`])}>
+        <header className={classNames([`${clsToolbar}`, `${clsToolbar}--fixed`])}>
             <div className={`${clsToolbar}__row`}>
-                <section className={className([`${clsToolbar}__section`, `${clsToolbar}__section--align-start`])}>
+                <section className={classNames([`${clsToolbar}__section`, `${clsToolbar}__section--align-start`])}>
                     <a className={materialIcon} onClick={onMenuClick}>menu</a>
                 </section>
                 <section
-                    className={className([
+                    className={classNames([
                         `${clsToolbar}__section`,
                         `${clsToolbar}__section--align-end`,
                         `${clsToolbar}__section--shrink-to-fit`

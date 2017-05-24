@@ -7,7 +7,7 @@
     "enzyme-to-json": "^1.5.1",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
-    "react-scripts": "0.9.5",
+    "react-scripts": "1.0.6",
     "react-test-renderer": "^15.5.4"
   },
   "dependencies": {

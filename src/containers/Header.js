@@ -4,7 +4,7 @@ import { toggleDrawer } from '../actions'
 
 const mapDispatchToProps = dispatch => {
     return {
-        onMenuClick: () => {
+        toggleDrawer: () => {
             dispatch(toggleDrawer)
         }
     }

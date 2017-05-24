@@ -3,12 +3,12 @@ import classNames from 'classnames'
 import { materialIcon, clsToolbar } from '../../constants/ui'
 import './Toolbar.css'
 
-const Toolbar = ({ onMenuClick }) => {
+const Toolbar = ({ toggleDrawer }) => {
     return (
         <header className={classNames([`${clsToolbar}`, `${clsToolbar}--fixed`])}>
             <div className={`${clsToolbar}__row`}>
                 <section className={classNames([`${clsToolbar}__section`, `${clsToolbar}__section--align-start`])}>
-                    <a className={materialIcon} onClick={onMenuClick}>menu</a>
+                    <a className={materialIcon} onClick={toggleDrawer}>menu</a>
                 </section>
                 <section
                     className={classNames([

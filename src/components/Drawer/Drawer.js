@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react'
 import Logo from '../Logo'
+import List from '../List'
 import classNames from 'classnames'
-import { materialIcon, clsTempDrawer, clsList, clsTypography, clsTheme } from '../../constants/ui'
+import { clsTempDrawer, clsTypography, clsTheme } from '../../constants/ui'
 import { MDCTemporaryDrawer } from '@material/drawer/temporary'
 
 import './Drawer.css'
@@ -25,9 +26,12 @@ class Drawer extends PureComponent {
     }
   }
   componentWillUnmount = () => this.drawer.destroy()
-  
+
   render() {
-    const menuItemList = [{ id: 1, label: 'Inbox', icon: 'inbox' }, { id: 2, label: 'Star', icon: 'star' }]
+    const Items = [
+      { id: 1, label: 'Inbox', icon: 'inbox' },
+      { id: 2, label: 'Star', icon: 'star' }
+    ]
     return (
       <aside className={classNames(clsTempDrawer, clsTypography)} ref={n => (this.node = n)}>
         <nav className={`${clsTempDrawer}__drawer`}>
@@ -41,18 +45,8 @@ class Drawer extends PureComponent {
               <Logo />
             </div>
           </header>
-          <nav className={classNames(`${clsTempDrawer}__content`, clsList)}>
-            {menuItemList.map(m => (
-              <a
-                key={m.id}
-                className={classNames(`${clsList}-item`, { [`${clsTempDrawer}--selected`]: false })}
-                href="/">
-                <i className={classNames(materialIcon, `${clsList}-item__start-detail`)} aria-hidden="true">
-                  {m.icon}
-                </i>
-                {m.label}
-              </a>
-            ))}
+          <nav className={`${clsTempDrawer}__content`}>
+            <List Items={Items} activeClass={`${clsTempDrawer}--selected`} />
           </nav>
         </nav>
       </aside>

@@ -1,8 +1,9 @@
 import { combineReducers } from "redux"
-import { drawer } from "./uiReducer"
+import { drawer, toolbar } from "./uiReducer"
 
 const rootReducer = combineReducers({
-    drawer
+    drawer,
+    toolbar
 })
 
 export default rootReducer

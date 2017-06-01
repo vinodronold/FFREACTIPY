@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import Logo from '../Logo'
 import List from '../List'
 import classNames from 'classnames'
-import { clsTempDrawer, clsTypography, clsTheme } from '../../constants/ui'
+import { clsTempDrawer, clsTheme } from '../../constants/ui'
 import { MDCTemporaryDrawer } from '@material/drawer/temporary'
 
 import './Drawer.css'
@@ -33,7 +33,7 @@ class Drawer extends PureComponent {
       { id: 2, label: 'Star', icon: 'star' }
     ]
     return (
-      <aside className={classNames(clsTempDrawer, clsTypography)} ref={n => (this.node = n)}>
+      <aside className={clsTempDrawer} ref={n => (this.node = n)}>
         <nav className={`${clsTempDrawer}__drawer`}>
           <header className={`${clsTempDrawer}__header`}>
             <div

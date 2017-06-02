@@ -3,7 +3,7 @@ import Logo from '../Logo'
 import List from '../List'
 import classNames from 'classnames'
 import { clsTempDrawer, clsTheme } from '../../constants/ui'
-import { MDCTemporaryDrawer } from '@material/drawer/temporary'
+import { MDCTemporaryDrawer } from '@material/drawer/dist/mdc.drawer'
 
 import './Drawer.css'
 

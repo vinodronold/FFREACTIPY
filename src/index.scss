@@ -1,7 +1,35 @@
+$gird-box-margin: 10px;
+
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    margin: $gird-box-margin;
+}
+
+.content {
+    grid-area: content;
+    position: relative;
+    margin: $gird-box-margin;
+}
+
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header  header  header" "content content sidebar" "footer  footer  footer";
 }
 
 .material-icons {

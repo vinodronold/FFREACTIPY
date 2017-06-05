@@ -1,4 +1,5 @@
 export const materialIcon = 'material-icons'
+export const clsElevation = 'mdc-elevation'
 export const clsToolbar = 'mdc-toolbar'
 export const clsTempDrawer = 'mdc-temporary-drawer'
 export const clsList = 'mdc-list'

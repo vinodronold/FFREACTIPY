@@ -14,6 +14,7 @@ import Typography, {
   Body1,
   Caption
 } from './components/Typography'
+import Paper from './components/Paper'
 //import TextField from './components/TextField'
 
 class App extends Component {
@@ -22,9 +23,11 @@ class App extends Component {
       <div>
         <MenuSideBar />
         <Typography className={'wrapper'}>
-        <div className={'header'}><Header /></div>
-          
-          <div className={'content'}>
+          <div className={'header'}><Header /></div>
+          <div className={'sidebar'}>
+            <Headline>sidebar</Headline>
+          </div>
+          <Paper className={'content'} z={10} style={{ padding: 10 }}>
             <Display4>Display4</Display4>
             <Display3>Display3</Display3>
             <Display2>Display2</Display2>
@@ -36,10 +39,7 @@ class App extends Component {
             <Body2>Body2</Body2>
             <Body1>Body1</Body1>
             <Caption>Caption</Caption>
-          </div>
-          <div className={'sidebar'}>
-            <Headline>sidebar</Headline>
-          </div>
+          </Paper>
           <div className={'footer'}>
             <Headline>footer</Headline>
           </div>

@@ -4,7 +4,7 @@ import { toggleDrawer } from '../actions'
 
 const mapStateToProps = state => {
   return {
-    header: state.toolbar.header
+    toolbar: state.toolbar
   }
 }
 const mapDispatchToProps = dispatch => {

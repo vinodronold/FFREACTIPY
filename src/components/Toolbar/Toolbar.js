@@ -1,9 +1,10 @@
 import React from 'react'
 import classNames from 'classnames'
-import { materialIcon, clsToolbar } from '../../constants/ui'
+import { materialIcon, clsToolbar, clsTheme } from '../../constants/ui'
+import Button from '../Button'
 import './Toolbar.css'
 
-const Toolbar = ({ header, toggleDrawer }) => {
+const Toolbar = ({ toolbar, toggleDrawer }) => {
   return (
     <div>
       <header className={classNames([`${clsToolbar}`, `${clsToolbar}--fixed`])}>
@@ -14,15 +15,18 @@ const Toolbar = ({ header, toggleDrawer }) => {
               `${clsToolbar}__section--align-start`,
               `${clsToolbar}__section--shrink-to-fit`
             )}>
-            <a className={materialIcon} onClick={toggleDrawer}>menu</a>
-            <span className={`${clsToolbar}__title`}>{header}</span>
+            <a className={classNames(materialIcon, 'md-36')} onClick={toggleDrawer}>menu</a>
           </section>
           <section className={classNames([`${clsToolbar}__section`, `${clsToolbar}__section--align-end`])}>
-            <a className={materialIcon} aria-label="More Options" alt="options">more_vert</a>
+            {toolbar.buttons.map(b =>
+              <Button className={`${clsTheme}--text-primary-on-primary`} key={b.label}>{b.label}</Button>
+            )}
+            <a className={classNames(materialIcon, 'md-36')} aria-label="More Options" alt="options">more_vert</a>
           </section>
         </div>
       </header>
       <div className={`${clsToolbar}-fixed-adjust`} />
+      <div style={{ padding: 10 }} />
     </div>
   )
 }

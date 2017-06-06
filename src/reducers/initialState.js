@@ -3,6 +3,11 @@ export default {
     isOpen: false
   },
   toolbar: {
-    header: 'Header'
+    buttons: [
+      {
+        label: 'test',
+        perform: () => console.log('Clicked', this.label)
+      }
+    ]
   }
 }

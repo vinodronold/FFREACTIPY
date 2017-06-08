@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './containers/Header'
 import MenuSideBar from './containers/MenuSideBar'
+import ChordsPlayer from './containers/ChordsPlayer'
 import Typography from './components/Typography'
 import Button from './components/Button'
 
@@ -10,6 +11,7 @@ class App extends Component {
       <Typography>
         <MenuSideBar />
         <Header />
+        <ChordsPlayer />
         <Button compact>TEST</Button>
       </Typography>
     )

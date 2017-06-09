@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import Logo from '../Logo'
-import List, { ListItem } from '../List'
+import DrawerItems from './DrawerItems'
 import classNames from 'classnames'
 import { clsTempDrawer, clsTheme } from '../../constants/ui'
 import { MDCTemporaryDrawer } from '@material/drawer/dist/mdc.drawer'
@@ -28,7 +28,6 @@ class Drawer extends PureComponent {
   componentWillUnmount = () => this.drawer.destroy()
 
   render() {
-    let _menu_items = [{ id: 1, label: 'Inbox', icon: 'inbox' }, { id: 2, label: 'Star', icon: 'star' }]
     return (
       <aside className={clsTempDrawer} ref={n => (this.node = n)}>
         <nav className={`${clsTempDrawer}__drawer`}>
@@ -43,10 +42,7 @@ class Drawer extends PureComponent {
             </div>
           </header>
           <nav className={`${clsTempDrawer}__content`}>
-            <List href>
-              {/*activeClass={`${clsTempDrawer}--selected`}*/}
-              {_menu_items.map(i => <ListItem key={i.id} href={'#'}>{i.label}</ListItem>)}
-            </List>
+            <DrawerItems />
           </nav>
         </nav>
       </aside>

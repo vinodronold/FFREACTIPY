@@ -1,11 +1,47 @@
+@import '../../_media.scss';
+@import "@material/animation/variables";
+@import "@material/elevation/mixins";
 .chordscontainer {
     margin: 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    @media only screen and (max-width: $mobile) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @media only screen and (min-width: $mobile) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
     grid-gap: 1rem;
     .chords {
         padding: 1rem;
         border-radius: 5;
         text-align: center;
+    }
+    .pulse {
+        background-color: #e0f2f1;
+        animation-name: chordPulse;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    .active {
+        background-color: #b2dfdb;
+        @include mdc-elevation(8);
+    }
+}
+
+@keyframes chordPulse {
+    0% {
+        @include mdc-elevation(2);
+    }
+    25% {
+        @include mdc-elevation(6);
+    }
+    50% {
+        @include mdc-elevation(10);
+    }
+    75% {
+        @include mdc-elevation(6);
+    }
+    100% {
+        @include mdc-elevation(2);
     }
 }

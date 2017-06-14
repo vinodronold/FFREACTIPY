@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "del-cli": "^1.0.0",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^1.5.1",
     "node-sass": "^4.5.3",
@@ -22,9 +23,11 @@
   },
   "scripts": {
     "build-css": "node-sass src/ -o src/ --include-path=node_modules",
+    "purify-css": "npm run build-css && del-cli src/purified.css && purifycss src/**/*.css src/**/*.js --min --info --out src/purified.css",
+    "watch-purify-css": "npm run purify-css && chokidar 'src/**/*.scss' -c 'npm run purify-css'",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive --include-path=node_modules",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
+    "start": "npm-run-all -p watch-purify-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

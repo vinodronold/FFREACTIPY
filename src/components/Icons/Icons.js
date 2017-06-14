@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
-import './Icons.css'
+//import './Icons.css'
 
 const Icon = size => path => ({ className, onClick }) =>
   <svg

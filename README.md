@@ -13,3 +13,9 @@
     "eject": "react-scripts eject"
   }
 ```
+
+````
+npm install -g purify-css
+npm install -g chokidar-cli
+
+````

@@ -2,11 +2,24 @@ export default {
   drawer: {
     isOpen: false
   },
+  moreOptions: {
+    isOpen: false,
+    lists: [
+      {
+        label: 'test',
+        onClick: () => {
+          console.log('Option List Clicked')
+        }
+      }
+    ]
+  },
   toolbar: {
     buttons: [
       {
         label: 'test',
-        perform: () => console.log('Clicked', this.label)
+        onClick: () => {
+          console.log('Toolbar Button Clicked')
+        }
       }
     ]
   }

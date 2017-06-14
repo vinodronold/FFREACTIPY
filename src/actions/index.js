@@ -1,3 +1,3 @@
 import toggleDrawer from './toggleDrawer'
-
-export { toggleDrawer }
+import toggleMoreOptions from './toggleMoreOptions'
+export { toggleDrawer, toggleMoreOptions }

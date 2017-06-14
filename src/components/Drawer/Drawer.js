@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import { clsTempDrawer, clsTheme } from '../../constants/ui'
 import { MDCTemporaryDrawer } from '@material/drawer/dist/mdc.drawer'
 
-import './Drawer.css'
+//import './Drawer.css'
 
 class Drawer extends PureComponent {
   constructor(props) {

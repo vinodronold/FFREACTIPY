@@ -3,9 +3,9 @@ import classNames from 'classnames'
 import { clsToolbar, clsTheme } from '../../constants/ui'
 import Icon from '../Icons'
 import Button from '../Button'
-import './Toolbar.css'
+// import './Toolbar.css'
 
-const Toolbar = ({ toolbar, toggleDrawer }) => {
+const Toolbar = ({ toolbar, toggleDrawer, toggleMoreOptions }) => {
   return (
     <div>
       <header className={classNames([`${clsToolbar}`, `${clsToolbar}--fixed`])}>
@@ -20,9 +20,9 @@ const Toolbar = ({ toolbar, toggleDrawer }) => {
           </section>
           <section className={classNames([`${clsToolbar}__section`, `${clsToolbar}__section--align-end`])}>
             {toolbar.buttons.map(b =>
-              <Button className={`${clsTheme}--text-primary-on-primary`} key={b.label}>{b.label}</Button>
+              <Button className={`${clsTheme}--text-primary-on-primary`} key={b.label} onClick={b.onClick}>{b.label}</Button>
             )}
-            <Icon i={'more_vert'} onClick={() => {console.log('more_vert')}}/>
+            <Icon i={'more_vert'} onClick={toggleMoreOptions}/>
           </section>
         </div>
       </header>

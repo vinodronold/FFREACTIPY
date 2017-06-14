@@ -3,7 +3,6 @@ import Header from './containers/Header'
 import MenuSideBar from './containers/MenuSideBar'
 import ChordsPlayer from './containers/ChordsPlayer'
 import Typography from './components/Typography'
-import Button from './components/Button'
 
 class App extends Component {
   render() {
@@ -12,7 +11,6 @@ class App extends Component {
         <MenuSideBar />
         <Header />
         <ChordsPlayer />
-        <Button compact>TEST</Button>
       </Typography>
     )
   }

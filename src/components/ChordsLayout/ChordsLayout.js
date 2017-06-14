@@ -1,6 +1,6 @@
 import React from 'react'
 import Paper from '../Paper'
-import './ChordsLayout.css'
+//import './ChordsLayout.css'
 const ChordsLayout = () => {
   return (
     <div className={'chordscontainer'}>

@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import { clsList } from '../../constants/ui'
-import './List.css'
+// import './List.css'
 
 const List = ({ avatar, children, classname, href }) => {
   let _cls = classnames(classname, clsList, { [`${clsList}--avatar-list`]: avatar })

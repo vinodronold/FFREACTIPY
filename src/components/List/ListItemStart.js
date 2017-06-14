@@ -1,14 +1,13 @@
 import React from 'react'
-import { clsList, materialIcon } from '../../constants/ui'
+import { clsList } from '../../constants/ui'
+import Icon from '../Icons'
 import classnames from 'classnames'
 
 const ListItemStart = ({ classname, icon, img, width = '56', height = '56', alt = 'Picture' }) => {
   let _cls = classnames(classname, `${clsList}-item__start-detail`)
   if (icon) {
     return (
-      <i className={classnames(_cls, materialIcon)} aria-hidden="true">
-        {icon}
-      </i>
+      <Icon className={_cls} i={icon} />
     )
   }
   if (img) {

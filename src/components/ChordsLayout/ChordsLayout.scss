@@ -19,7 +19,9 @@
     .pulse {
         background-color: #e0f2f1;
         animation-name: chordPulse;
-        animation-duration: 1s;
+        animation-duration: 500ms;
+        animation-timing-function: ease-out;
+        animation-direction: alternate;
         animation-iteration-count: infinite;
     }
     .active {
@@ -32,16 +34,8 @@
     0% {
         @include mdc-elevation(2);
     }
-    25% {
-        @include mdc-elevation(6);
-    }
-    50% {
-        @include mdc-elevation(10);
-    }
-    75% {
-        @include mdc-elevation(6);
-    }
+
     100% {
-        @include mdc-elevation(2);
+        @include mdc-elevation(12);
     }
 }

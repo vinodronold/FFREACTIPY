@@ -1,0 +1,20 @@
+@import "@material/elevation/mixins";
+.chord-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+
+    .chord-list-item {
+        @include mdc-elevation(2);
+        height: auto!important;
+        padding: 1rem;
+        cursor: pointer;
+        &:hover {
+            @include mdc-elevation(6);
+        }
+        .chord-list-item-img {
+            height: auto!important;
+            width: auto!important;
+        }
+    }
+}

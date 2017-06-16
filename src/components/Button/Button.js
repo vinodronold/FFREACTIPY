@@ -3,7 +3,7 @@ import { bool, node, string } from 'prop-types'
 import { clsButton } from '../../constants/ui'
 import classNames from 'classnames'
 
-// import './Button.css'
+import './Button.css'
 
 const _propTypes = {
   accent: bool,

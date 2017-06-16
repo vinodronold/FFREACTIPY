@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { clsToolbar, clsTheme } from '../../constants/ui'
 import Icon from '../Icons'
 import Button from '../Button'
-// import './Toolbar.css'
+import './Toolbar.css'
 
 const Toolbar = ({ toolbar, toggleDrawer, toggleMoreOptions }) => {
   return (

@@ -1,4 +1,4 @@
-import ChordsPlayerLayout from '../components/ChordsPlayerLayout'
+import ChordsListLayout from '../components/ChordsListLayout'
 import { connect } from 'react-redux'
 
 // const mapStateToProps = state => {
@@ -15,6 +15,6 @@ import { connect } from 'react-redux'
 //     }
 // }
 
-const ChordsPlayer = connect(null, null)(ChordsPlayerLayout)
+const ChordsList = connect(null, null)(ChordsListLayout)
 
-export default ChordsPlayer
+export default ChordsList

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { MDCRipple } from '@material/ripple/dist/mdc.ripple'
 
-// import './Ripple.css'
+import './Ripple.css'
 
 export default function Ripple(WrappedComponent) {
 

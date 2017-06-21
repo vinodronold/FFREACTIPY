@@ -12,7 +12,6 @@ class Menu extends PureComponent {
     this.menu = null
   }
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdate')
     return nextProps.moreOptions.isOpen
   }
   componentDidMount() {
@@ -23,7 +22,6 @@ class Menu extends PureComponent {
     })
   }
   componentDidUpdate() {
-    console.log('componentDidUpdate')
     if (this.props.moreOptions.isOpen) {
       this.menu.show()
     }

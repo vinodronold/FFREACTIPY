@@ -1,43 +1,15 @@
 import React from 'react'
+import classnames from 'classnames'
 import Paper from '../Paper'
 import './ChordsPlayerLayout.css'
-const ChordsLayout = () => {
-  return (
-    <div className={'chordscontainer'}>
-      <Paper className={'chords pulse'} transition>A</Paper>
-      <Paper className={'chords active'}>B</Paper>
-      <Paper className={'chords'}>C</Paper>
-      <Paper className={'chords'}>D</Paper>
-      <Paper className={'chords'}>E</Paper>
-      <Paper className={'chords'}>A</Paper>
-      <Paper className={'chords'}>B</Paper>
-      <Paper className={'chords'}>C</Paper>
-      <Paper className={'chords'}>D</Paper>
-      <Paper className={'chords'}>E</Paper>
-      <Paper className={'chords'}>A</Paper>
-      <Paper className={'chords'}>B</Paper>
-      <Paper className={'chords'}>C</Paper>
-      <Paper className={'chords'}>D</Paper>
-      <Paper className={'chords'}>E</Paper>
-      <Paper className={'chords'}>E</Paper>
-      <Paper className={'chords'}>A</Paper>
-      <Paper className={'chords'}>B</Paper>
-      <Paper className={'chords'}>C</Paper>
-      <Paper className={'chords'}>D</Paper>
-      <Paper className={'chords'}>E</Paper>
-      <Paper className={'chords'}>A</Paper>
-      <Paper className={'chords'}>B</Paper>
-      <Paper className={'chords'}>C</Paper>
-      <Paper className={'chords'}>D</Paper>
-      <Paper className={'chords'}>E</Paper>
-      <Paper className={'chords'}>A</Paper>
-      <Paper className={'chords'}>B</Paper>
-      <Paper className={'chords'}>C</Paper>
-      <Paper className={'chords'}>D</Paper>
-      <Paper className={'chords'}>E</Paper>
-      <Paper className={'chords'}>E</Paper>
-    </div>
-  )
-}
 
-export default ChordsLayout
+const ChordsPlayerLayout = ({ chords }) =>
+  <div className={'chordscontainer'}>
+    {chords.map(c =>
+      <Paper key={c.id} className={classnames('chords', { pulse: c.pulse, active: c.active })} transition>
+        {c.chord}
+      </Paper>
+    )}
+  </div>
+
+export default ChordsPlayerLayout

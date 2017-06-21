@@ -1,7 +1,7 @@
 import React from 'react'
 import { bool, node, string } from 'prop-types'
 import { clsButton } from '../../constants/ui'
-import classNames from 'classnames'
+import classnames from 'classnames'
 
 import './Button.css'
 
@@ -17,7 +17,7 @@ const _propTypes = {
 }
 
 const Button = ({ accent, children, className, compact, dense, href, primary, raised, ...otherProps }) => {
-  const _cls = classNames(
+  const _cls = classnames(
     clsButton,
     {
       [`${clsButton}--accent`]: accent,

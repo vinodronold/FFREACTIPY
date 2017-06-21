@@ -1,12 +1,10 @@
 import React from 'react'
 import { clsTypography } from '../../constants/ui'
-import classNames from 'classnames'
 
-const Element = e => ({ className, children, ...rest }) => (
-  <div className={classNames(className, `${clsTypography}--${e}`, `${clsTypography}--adjust-margin`)} {...rest}>
+const Element = e => ({ className, children, ...rest }) =>
+  <div className={`${className} ${clsTypography}--${e} ${clsTypography}--adjust-margin`} {...rest}>
     {children}
   </div>
-)
 
 export const Display4 = Element('display4')
 export const Display3 = Element('display3')

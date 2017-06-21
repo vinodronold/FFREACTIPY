@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { clsTextField } from '../../constants/ui'
-import classNames from 'classnames'
+import classnames from 'classnames'
 import './TextField.css'
 
 class TextField extends PureComponent {
@@ -9,7 +9,7 @@ class TextField extends PureComponent {
     return (
       <div
         style={style}
-        className={classNames(clsTextField, {
+        className={classnames(clsTextField, {
           [`${clsTextField}--fullwidth`]: fullWidth,
           [`${clsTextField}--dense`]: dense
         })}>

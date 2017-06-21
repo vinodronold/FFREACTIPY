@@ -1,10 +1,9 @@
 import React from 'react'
 import { clsList } from '../../constants/ui'
 import Icon from '../Icons'
-import classnames from 'classnames'
 
-const ListItemStart = ({ classname, icon, img, width = '120', height = '90', alt = 'Picture' }) => {
-  let _cls = classnames(classname, `${clsList}-item__start-detail`)
+const ListItemStart = ({ className, icon, img, width = '120', height = '90', alt = 'Picture' }) => {
+  let _cls = `${className} ${clsList}-item__start-detail`
   if (icon) {
     return (
       <Icon className={_cls} i={icon} />

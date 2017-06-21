@@ -1,18 +1,18 @@
 import React from 'react'
 import { clsList } from '../../constants/ui'
-import classnames from 'classnames'
 
-const ListItemEnd = ({ classname, children, icon, href }) => {
-  let _cls = classnames(classname, `${clsList}-item__end-detail`)
+const ListItemEnd = ({ className, children, icon, href }) => {
+  let _props = {}
+  _props.className = `${className} ${clsList}-item__end-detail`
   if (href) {
     return (
-      <a href={href} className={_cls}>
+      <a href={href} {..._props}>
         {icon}
       </a>
     )
   }
   return (
-    <i className={_cls} aria-hidden="true">
+    <i {..._props}>
       {icon}
     </i>
   )

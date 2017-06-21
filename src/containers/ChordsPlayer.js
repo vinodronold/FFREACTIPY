@@ -1,12 +1,12 @@
 import ChordsPlayerLayout from '../components/ChordsPlayerLayout'
 import { connect } from 'react-redux'
 
-// const mapStateToProps = state => {
-//     return ({
-//         drawer: state.drawer
-//     }
-// )
-// }
+const mapStateToProps = state => {
+    return ({
+        chords: state.chords['IarsrX60bZw']
+    }
+)
+}
 // const mapDispatchToProps = dispatch => {
 //     return {
 //         toggleDrawer: () => {
@@ -15,6 +15,6 @@ import { connect } from 'react-redux'
 //     }
 // }
 
-const ChordsPlayer = connect(null, null)(ChordsPlayerLayout)
+const ChordsPlayer = connect(mapStateToProps, null)(ChordsPlayerLayout)
 
 export default ChordsPlayer

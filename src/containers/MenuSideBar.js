@@ -1,6 +1,6 @@
 import Drawer from '../components/Drawer'
 import { connect } from 'react-redux'
-import { toggleDrawer } from '../actions'
+import { ToggleDrawer } from '../actions'
 
 const mapStateToProps = state => {
     return ({
@@ -11,7 +11,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         toggleDrawer: () => {
-            dispatch(toggleDrawer)
+            dispatch(ToggleDrawer)
         }
     }
 }

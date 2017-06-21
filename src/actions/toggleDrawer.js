@@ -1,6 +1,6 @@
 import { TOGGLE_DRAWER } from '../constants/actionTypes'
-const toggleDrawer = {
+const ToggleDrawer = {
     type: TOGGLE_DRAWER
 }
 
-export default toggleDrawer
+export default ToggleDrawer

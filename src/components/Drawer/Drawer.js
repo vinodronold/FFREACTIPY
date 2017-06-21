@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import Logo from '../Logo'
 import DrawerItems from './DrawerItems'
-import classNames from 'classnames'
 import { clsTempDrawer, clsTheme } from '../../constants/ui'
 import { MDCTemporaryDrawer } from '@material/drawer/dist/mdc.drawer'
 
@@ -33,11 +32,7 @@ class Drawer extends PureComponent {
         <nav className={`${clsTempDrawer}__drawer`}>
           <header className={`${clsTempDrawer}__header`}>
             <div
-              className={classNames(
-                `${clsTempDrawer}__header-content`,
-                `${clsTheme}--primary-bg`,
-                `${clsTheme}--text-primary-on-primary`
-              )}>
+              className={`${clsTempDrawer}__header-content ${clsTheme}--primary-bg ${clsTheme}--text-primary-on-primary`}>
               <Logo />
             </div>
           </header>

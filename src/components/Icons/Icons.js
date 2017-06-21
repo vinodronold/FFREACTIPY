@@ -1,5 +1,4 @@
 import React from 'react'
-import classnames from 'classnames'
 import './Icons.css'
 
 const Icon = size => path => ({ className, onClick }) =>
@@ -8,7 +7,7 @@ const Icon = size => path => ({ className, onClick }) =>
     width={size}
     height={size}
     viewBox={`0 0 ${size} ${size}`}
-    className={classnames(className, 'icon')}
+    className={`${className} icon`}
     onClick={onClick}>
     <path d={path} />
   </svg>

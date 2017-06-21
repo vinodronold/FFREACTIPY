@@ -7,7 +7,7 @@ const DrawerItems = () => {
   return (
     <List href>
       {_items.map(i =>
-        <ListItem key={i.id} href={'#'} classname={i.id === 1 ? `${clsTempDrawer}--selected` : ''}>
+        <ListItem key={i.id} href={'#'} className={i.id === 1 ? `${clsTempDrawer}--selected` : ''}>
           <ListItemStart icon={i.icon} />{i.label}
         </ListItem>
       )}

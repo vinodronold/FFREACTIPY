@@ -1,6 +1,6 @@
 import { TOGGLE_MORE_OPTIONS } from '../constants/actionTypes'
-const toggleMoreOptions = {
+const ToggleMoreOptions = {
     type: TOGGLE_MORE_OPTIONS
 }
 
-export default toggleMoreOptions
+export default ToggleMoreOptions

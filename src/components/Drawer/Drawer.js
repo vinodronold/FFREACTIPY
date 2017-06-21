@@ -13,18 +13,20 @@ class Drawer extends PureComponent {
     this.drawer = null
   }
   shouldComponentUpdate = (nextProps, nextState) => nextProps.drawer.isOpen
-  componentDidMount = () => {
+  componentDidMount() {
     this.drawer = new MDCTemporaryDrawer(this.node)
     this.node.addEventListener('MDCTemporaryDrawer:close', () => {
       this.props.toggleDrawer()
     })
   }
-  componentDidUpdate = () => {
+  componentDidUpdate() {
     if (this.props.drawer.isOpen) {
       this.drawer.open = this.props.drawer.isOpen
     }
   }
-  componentWillUnmount = () => this.drawer.destroy()
+  componentWillUnmount() {
+    this.drawer.destroy()
+  }
 
   render() {
     return (
@@ -37,7 +39,7 @@ class Drawer extends PureComponent {
             </div>
           </header>
           <nav className={`${clsTempDrawer}__content`}>
-            <DrawerItems />
+            <DrawerItems items={this.props.items} />
           </nav>
         </nav>
       </aside>

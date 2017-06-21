@@ -3,13 +3,14 @@ import classnames from 'classnames'
 import Paper from '../Paper'
 import './ChordsPlayerLayout.css'
 
+const DisplayChord = ({ chord, pulse = false, active = false }) =>
+  <Paper className={classnames('chords', { pulse: pulse, active: active })} transition>
+    {chord}
+  </Paper>
+  
 const ChordsPlayerLayout = ({ chords }) =>
   <div className={'chordscontainer'}>
-    {chords.map(c =>
-      <Paper key={c.id} className={classnames('chords', { pulse: c.pulse, active: c.active })} transition>
-        {c.chord}
-      </Paper>
-    )}
+    {chords.map(c => <DisplayChord key={c.id} {...c} />)}
   </div>
 
 export default ChordsPlayerLayout

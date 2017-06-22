@@ -1,4 +1,5 @@
 import ChordsPlayerLayout from '../components/ChordsPlayerLayout'
+import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 const mapStateToProps = state => {
@@ -15,6 +16,6 @@ const mapStateToProps = state => {
 //     }
 // }
 
-const ChordsPlayer = connect(mapStateToProps, null)(ChordsPlayerLayout)
+const ChordsPlayer = withRouter(connect(mapStateToProps, null)(ChordsPlayerLayout))
 
 export default ChordsPlayer

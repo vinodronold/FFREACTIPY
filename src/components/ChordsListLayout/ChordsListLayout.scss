@@ -19,7 +19,10 @@
     margin: 1rem;
         cursor: pointer;
         &:hover {
-            @include mdc-elevation(6);
+            @include mdc-elevation(8);
+        }
+        &:active {
+            @include mdc-elevation(4);
         }
         .chord-list-item-img {
             height: auto!important;

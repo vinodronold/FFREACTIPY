@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { clsList } from '../../constants/ui'
 
 const ListItem = ({ className, children, href, role, tabIndex }) => {
@@ -12,7 +13,7 @@ const ListItem = ({ className, children, href, role, tabIndex }) => {
   }
 
   if (href) {
-    return <a href={href} {..._props}>{children}</a>
+    return <Link to={href} {..._props}>{children}</Link>
   }
   return <li {..._props}>{children}</li>
 }

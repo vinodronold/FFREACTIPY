@@ -1,4 +1,5 @@
 import ChordsListLayout from '../components/ChordsListLayout'
+import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 const mapStateToProps = state => {
@@ -15,6 +16,6 @@ const mapStateToProps = state => {
 //     }
 // }
 
-const ChordsList = connect(mapStateToProps, null)(ChordsListLayout)
+const ChordsList = withRouter(connect(mapStateToProps, null)(ChordsListLayout))
 
 export default ChordsList

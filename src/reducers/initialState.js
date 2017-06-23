@@ -6,19 +6,19 @@ export default {
     isOpen: false,
     lists: [
       {
-        label: 'test 1',
+        label: 'test test test test test 1',
         onClick: () => {
           console.log('Option List Clicked')
         }
       },
       {
-        label: 'test 2',
+        label: 'test test test test test 2',
         onClick: () => {
           console.log('Option List Clicked')
         }
       },
       {
-        label: 'test 3',
+        label: 'test test test test test 3',
         onClick: () => {
           console.log('Option List Clicked')
         }
@@ -78,7 +78,25 @@ export default {
       { id: 17, chord: 'C', start: '' },
       { id: 18, chord: 'D', start: '' },
       { id: 19, chord: 'E', start: '' },
-      { id: 20, chord: 'F', start: '' }
+      { id: 20, chord: 'F', start: '' },
+      { id: 23, chord: 'C', start: '' },
+      { id: 24, chord: 'D', start: '' },
+      { id: 25, chord: 'E', start: '' },
+      { id: 26, chord: 'F', start: '' },
+      { id: 27, chord: 'G', start: '' },
+      { id: 28, chord: 'A', start: '' },
+      { id: 29, chord: 'B', start: '' },
+      { id: 30, chord: 'C', start: '' },
+      { id: 31, chord: 'D', start: '' },
+      { id: 32, chord: 'E', start: '' },
+      { id: 33, chord: 'F', start: '' },
+      { id: 34, chord: 'G', start: '' },
+      { id: 35, chord: 'A', start: '' },
+      { id: 36, chord: 'B', start: '' },
+      { id: 37, chord: 'C', start: '' },
+      { id: 38, chord: 'D', start: '' },
+      { id: 39, chord: 'E', start: '' },
+      { id: 40, chord: 'F', start: '' }
     ]
   }
 }

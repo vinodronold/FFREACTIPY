@@ -1,16 +1,18 @@
 import React from 'react'
 import List, { ListItem, ListItemStart, ListItemText, ListItemTextSecondary } from '../List'
+import { Mobile, YTImg } from '../Utils'
 import './ChordsListLayout.css'
 
-const YTImg = id => `https://i.ytimg.com/vi/${id}/default.jpg`
-const ChordsListItem = ({ id, title, subtitle }) =>
+const ChordsListItem = ({ id, title, subtitle }) =>{
+  console.log(navigator.userAgent.match())
+  return (
   <ListItem href={`/play/${id}`} className={'chord-list-item'}>
-      <ListItemStart className={'chord-list-item-img'} img={YTImg(id)} />
-      <ListItemText>
-        {title}
-        {subtitle ? <ListItemTextSecondary>{subtitle}</ListItemTextSecondary> : ''}
-      </ListItemText>
-  </ListItem>
+    {!Mobile && <ListItemStart className={'chord-list-item-img'} img={YTImg(id)} />}
+    <ListItemText>
+      {title}
+      {subtitle ? <ListItemTextSecondary>{subtitle}</ListItemTextSecondary> : ''}
+    </ListItemText>
+  </ListItem>)}
 
 const ChordsListLayout = ({ chordlist = [] }) =>
   <List href twoline className={'chord-list'}>

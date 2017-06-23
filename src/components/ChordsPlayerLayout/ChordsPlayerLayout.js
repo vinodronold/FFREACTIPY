@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import Paper from '../Paper'
+import YTPlayer from '../YTPlayer'
 import './ChordsPlayerLayout.css'
 
 const DisplayChord = ({ chord, pulse = false, active = false }) =>
@@ -16,6 +17,7 @@ const ChordsPlayerLayout = ({ chords, match }) => {
       <div className={'chordscontainer'}>
         {chords.map(c => <DisplayChord key={c.id} {...c} />)}
       </div>
+      <YTPlayer id={match.params.id} />
     </div>
   )
 }

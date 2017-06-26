@@ -35,6 +35,9 @@ export default {
       }
     ]
   },
+  player: {
+    status: -1
+  },
   chordlist: [
     {
       id: 'IarsrX60bZw~',

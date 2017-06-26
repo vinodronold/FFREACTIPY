@@ -3,16 +3,14 @@ import List, { ListItem, ListItemStart, ListItemText, ListItemTextSecondary } fr
 import { Mobile, YTImg } from '../Utils'
 import './ChordsListLayout.css'
 
-const ChordsListItem = ({ id, title, subtitle }) =>{
-  console.log(navigator.userAgent.match())
-  return (
+const ChordsListItem = ({ id, title, subtitle }) =>
   <ListItem href={`/play/${id}`} className={'chord-list-item'}>
     {!Mobile && <ListItemStart className={'chord-list-item-img'} img={YTImg(id)} />}
     <ListItemText>
       {title}
       {subtitle ? <ListItemTextSecondary>{subtitle}</ListItemTextSecondary> : ''}
     </ListItemText>
-  </ListItem>)}
+  </ListItem>
 
 const ChordsListLayout = ({ chordlist = [] }) =>
   <List href twoline className={'chord-list'}>

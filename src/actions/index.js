@@ -1,3 +1,4 @@
 import ToggleDrawer from './ToggleDrawer'
 import ToggleMoreOptions from './ToggleMoreOptions'
-export { ToggleDrawer, ToggleMoreOptions }
+import PlayerStatusChanged from './PlayerStatusChanged'
+export { ToggleDrawer, ToggleMoreOptions, PlayerStatusChanged }

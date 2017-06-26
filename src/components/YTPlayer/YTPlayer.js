@@ -22,11 +22,14 @@ class YTPlayer extends Component {
     })
 
     this.player_events = this.player.on('stateChange', ({ data }) => {
-      this.status = data
-      PlayerStatusChanged(data)
+      if (!(this.status === data)) {
+        this.status = data
+        PlayerStatusChanged(data)
+      }
     })
   }
   componentDidUpdate() {
+    this.status = this.props.status
     switch (this.props.status) {
       case PLAYER_STATUS.PAUSED:
         this.player.pauseVideo()

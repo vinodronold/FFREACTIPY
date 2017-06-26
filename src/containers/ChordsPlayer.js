@@ -1,5 +1,5 @@
 import ChordsPlayerLayout from '../components/ChordsPlayerLayout'
-import { PlayerStatusChanged } from '../actions'
+import { PlayerStatusChanged, Play, Pause, Stop } from '../actions'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
@@ -11,9 +11,10 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    PlayerStatusChanged: (status) => {
-      dispatch(PlayerStatusChanged(status))
-    }
+    PlayerStatusChanged: status => dispatch(PlayerStatusChanged(status)),
+    Play: () => dispatch(Play),
+    Pause: () => dispatch(Pause),
+    Stop: () => dispatch(Stop)
   }
 }
 

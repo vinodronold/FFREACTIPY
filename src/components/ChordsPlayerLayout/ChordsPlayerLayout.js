@@ -6,14 +6,8 @@ import YTPlayer from '../YTPlayer'
 import { PLAYER_STATUS } from '../../constants'
 import './ChordsPlayerLayout.css'
 
-const DisplayControl = ({ label, PlayerStatusChanged, status, control }) =>
-  <Button
-    primary
-    compact
-    accent={status === control}
-    onClick={() => {
-      PlayerStatusChanged(control)
-    }}>
+const DisplayControl = ({ label, onClick }) =>
+  <Button primary compact onClick={onClick}>
     {label}
   </Button>
 
@@ -22,32 +16,19 @@ const DisplayChord = ({ chord, pulse = false, active = false }) =>
     {chord}
   </Paper>
 
-const ChordsPlayerLayout = ({ chords, match, player, PlayerStatusChanged }) =>
+const ChordsPlayerLayout = ({ chords, match, player, PlayerStatusChanged, Play, Pause, Stop }) =>
   <div>
     <div style={{ textAlign: 'center' }}>
       <DisplayControl
-        label={'play'}
-        status={player.status}
-        control={PLAYER_STATUS.PLAYING}
-        PlayerStatusChanged={PlayerStatusChanged}
+        label={player.status === PLAYER_STATUS.PLAYING ? 'PAUSE' : 'PLAY'}
+        onClick={player.status === PLAYER_STATUS.PLAYING ? Pause : Play}
       />
-      <DisplayControl
-        label={'pause'}
-        status={player.status}
-        control={PLAYER_STATUS.PAUSED}
-        PlayerStatusChanged={PlayerStatusChanged}
-      />
-      <DisplayControl
-        label={'stop'}
-        status={player.status}
-        control={PLAYER_STATUS.ENDED}
-        PlayerStatusChanged={PlayerStatusChanged}
-      />
+      <DisplayControl label={'stop'} status={player.status} control={PLAYER_STATUS.ENDED} onClick={Stop} />
     </div>
     <div className={'chordscontainer'}>
       {chords.map(c => <DisplayChord key={c.id} {...c} />)}
     </div>
     <YTPlayer id={match.params.id} status={player.status} PlayerStatusChanged={PlayerStatusChanged} />
   </div>
-  
+
 export default ChordsPlayerLayout

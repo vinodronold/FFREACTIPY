@@ -11,7 +11,7 @@ class Menu extends PureComponent {
     this.node = null
     this.menu = null
   }
-  shouldComponentUpdate = (nextProps, nextState) => nextProps.isOpen
+  shouldComponentUpdate = nextProps => nextProps.isOptionsOpen
   componentDidMount() {
     this.menu = new MDCSimpleMenu(this.node)
     this.menu.hide()
@@ -20,7 +20,7 @@ class Menu extends PureComponent {
     })
   }
   componentDidUpdate() {
-    if (this.props.isOpen) {
+    if (this.props.isOptionsOpen) {
       this.menu.show()
     }
   }
@@ -29,7 +29,7 @@ class Menu extends PureComponent {
   }
 
   render() {
-    const { i, toggleMoreOptions, lists } = this.props
+    const { i, opts, toggleMoreOptions } = this.props
     return (
       <div className={clsMenuAnchor}>
         <Icon i={i} onClick={toggleMoreOptions} />
@@ -38,7 +38,7 @@ class Menu extends PureComponent {
           style={{ right: 0, top: 0 }}
           ref={n => (this.node = n)}>
           <List className={`${clsMenu}__items`} role="menu">
-            {lists.map(l => <ListItem key={l.label} role="menuitem" tabIndex="0">{l.label}</ListItem>)}
+            {opts.map(l => <ListItem key={l.label} role="menuitem" tabIndex="0">{l.label}</ListItem>)}
           </List>
         </div>
       </div>

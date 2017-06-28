@@ -1,17 +1,11 @@
 import { combineReducers } from "redux"
-import DrawerReducer from './DrawerReducer'
-import MoreOptionsReducer from './MoreOptionsReducer'
 import ToolbarReducer from './ToolbarReducer'
-import ChordListReducer from './ChordListReducer'
-import ChordsReducer from './ChordsReducer'
+import SongsReducer from './SongsReducer'
 import PlayerReducer from './PlayerReducer'
 
 const rootReducer = combineReducers({
-    drawer: DrawerReducer,
-    moreOptions: MoreOptionsReducer,
     toolbar: ToolbarReducer,
-    chordlist: ChordListReducer,
-    chords: ChordsReducer,
+    songs: SongsReducer,
     player: PlayerReducer
 })
 

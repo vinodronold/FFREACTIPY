@@ -4,7 +4,7 @@ import { ToggleDrawer } from '../actions'
 
 const mapStateToProps = state => {
   return {
-    drawer: state.drawer,
+    isDrawerOpen: state.toolbar.isDrawerOpen,
     items: [{ id: 1, label: 'Inbox', icon: 'inbox' }, { id: 2, label: 'Star', icon: 'star' }]
   }
 }

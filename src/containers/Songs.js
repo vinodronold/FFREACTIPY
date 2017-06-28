@@ -1,10 +1,10 @@
-import ChordsListLayout from '../components/ChordsListLayout'
+import SongsList from '../components/SongsList'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 const mapStateToProps = state => {
     return ({
-        chordlist: state.chordlist
+        songs: state.songs
     }
 )
 }
@@ -16,6 +16,6 @@ const mapStateToProps = state => {
 //     }
 // }
 
-const ChordsList = withRouter(connect(mapStateToProps, null)(ChordsListLayout))
+const Songs = withRouter(connect(mapStateToProps, null)(SongsList))
 
-export default ChordsList
+export default Songs

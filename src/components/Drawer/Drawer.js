@@ -12,7 +12,7 @@ class Drawer extends PureComponent {
     this.node = null
     this.drawer = null
   }
-  shouldComponentUpdate = (nextProps, nextState) => nextProps.drawer.isOpen
+  shouldComponentUpdate = nextProps => nextProps.isDrawerOpen
   componentDidMount() {
     this.drawer = new MDCTemporaryDrawer(this.node)
     this.node.addEventListener('MDCTemporaryDrawer:close', () => {
@@ -20,8 +20,8 @@ class Drawer extends PureComponent {
     })
   }
   componentDidUpdate() {
-    if (this.props.drawer.isOpen) {
-      this.drawer.open = this.props.drawer.isOpen
+    if (this.props.isDrawerOpen) {
+      this.drawer.open = this.props.isDrawerOpen
     }
   }
   componentWillUnmount() {

@@ -4,19 +4,19 @@ import Button from '../Button'
 import Paper from '../Paper'
 import YTPlayer from '../YTPlayer'
 import { PLAYER_STATUS } from '../../constants'
-import './ChordsPlayerLayout.css'
+import './PlayerLayout.css'
 
 const DisplayControl = ({ label, onClick }) =>
   <Button primary compact onClick={onClick}>
     {label}
   </Button>
 
-const DisplayChord = ({ chord, pulse = false, active = false }) =>
+const DisplayChord = ({ c, pulse = false, active = false }) =>
   <Paper className={classnames('chords', { pulse: pulse, active: active })} transition>
-    {chord}
+    {c}
   </Paper>
 
-const ChordsPlayerLayout = ({ chords, match, player, PlayerStatusChanged }) => {
+const PlayerLayout = ({ song, match, player, PlayerStatusChanged }) => {
   const Play = () => PlayerStatusChanged(PLAYER_STATUS.PLAYING)
   const Pause = () => PlayerStatusChanged(PLAYER_STATUS.PAUSED)
   const Stop = () => PlayerStatusChanged(PLAYER_STATUS.ENDED)
@@ -30,10 +30,10 @@ const ChordsPlayerLayout = ({ chords, match, player, PlayerStatusChanged }) => {
         <DisplayControl label={'stop'} onClick={Stop} />
       </div>
       <div className={'chordscontainer'}>
-        {chords.map(c => <DisplayChord key={c.id} {...c} />)}
+        {song.chords.map(c => <DisplayChord key={c.id} {...c} />)}
       </div>
       <YTPlayer id={match.params.id} status={player.status} PlayerStatusChanged={PlayerStatusChanged} />
     </div>
   )
 }
-export default ChordsPlayerLayout
+export default PlayerLayout

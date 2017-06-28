@@ -16,22 +16,22 @@ const ToolbarLeft = ({ toggleDrawer }) =>
     <Icon i={'menu'} onClick={toggleDrawer} />
   </section>
 
-const ToolbarRight = ({ toolbar, moreOptions, toggleMoreOptions }) =>
+const ToolbarRight = ({ isOptionsOpen, btns, opts, toggleMoreOptions }) =>
   <section className={`${clsToolbar}__section ${clsToolbar}__section--align-end`}>
-    {toolbar.buttons.map(b => <ToolbarButton key={b.label} {...b} />)}
-    <Menu i={'more_vert'} toggleMoreOptions={toggleMoreOptions} {...moreOptions} />
+    {btns.map(b => <ToolbarButton key={b.label} {...b} />)}
+    {opts && <Menu i={'more_vert'} isOptionsOpen={isOptionsOpen} opts={opts} toggleMoreOptions={toggleMoreOptions} />}
   </section>
 
-const Toolbar = ({ toggleDrawer, toolbar, moreOptions, toggleMoreOptions }) =>
+const Toolbar = ({ isOptionsOpen, btns, opts, toggleDrawer, toggleMoreOptions }) =>
   <div>
     <header className={`${clsToolbar} ${clsToolbar}--fixed`}>
       <div className={`${clsToolbar}__row`}>
         <ToolbarLeft toggleDrawer={toggleDrawer} />
-        <ToolbarRight toolbar={toolbar} moreOptions={moreOptions} toggleMoreOptions={toggleMoreOptions} />
+        <ToolbarRight isOptionsOpen={isOptionsOpen} btns={btns} opts={opts} toggleMoreOptions={toggleMoreOptions} />
       </div>
     </header>
     <div className={`${clsToolbar}-fixed-adjust`} />
     <div style={{ padding: 10 }} />
   </div>
-
+  
 export default Toolbar

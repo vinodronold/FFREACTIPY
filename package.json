@@ -22,6 +22,7 @@
     "redux": "^3.7.0",
     "redux-logger": "^3.0.6",
     "redux-saga": "^0.15.4",
+    "reselect": "^3.0.1",
     "youtube-player": "^5.4.0"
   },
   "scripts": {

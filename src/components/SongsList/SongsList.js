@@ -1,9 +1,9 @@
 import React from 'react'
 import List, { ListItem, ListItemStart, ListItemText, ListItemTextSecondary } from '../List'
 import { Mobile, YTImg } from '../Utils'
-import './ChordsListLayout.css'
+import './SongsList.css'
 
-const ChordsListItem = ({ id, title, subtitle }) =>
+const Song = ({ id, title, subtitle }) =>
   <ListItem href={`/play/${id}`} className={'chord-list-item'}>
     {!Mobile && <ListItemStart className={'chord-list-item-img'} img={YTImg(id)} />}
     <ListItemText>
@@ -12,9 +12,9 @@ const ChordsListItem = ({ id, title, subtitle }) =>
     </ListItemText>
   </ListItem>
 
-const ChordsListLayout = ({ chordlist = [] }) =>
+const SongsList = ({ songs = [] }) =>
   <List href twoline className={'chord-list'}>
-    {chordlist.map(c => <ChordsListItem key={c.id} {...c} />)}
+    {Object.keys(songs).map(key => <Song key={key} id={key} title={songs[key].title} subtitle={songs[key].subtitle} />)}
   </List>
 
-export default ChordsListLayout
+export default SongsList

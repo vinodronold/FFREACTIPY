@@ -1,12 +1,12 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import ChordsList from '../containers/ChordsList'
-import ChordsPlayer from '../containers/ChordsPlayer'
+import Songs from '../containers/Songs'
+import Player from '../containers/Player'
 
 const Routes = () =>
   <div>
-    <Route exact path="/" component={ChordsList} />
-    <Route path="/play/:id" component={ChordsPlayer} />
+    <Route exact path="/" component={Songs} />
+    <Route path="/play/:id" component={Player} />
   </div>
 
 export default Routes

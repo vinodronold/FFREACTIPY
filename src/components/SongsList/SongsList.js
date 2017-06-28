@@ -3,8 +3,13 @@ import List, { ListItem, ListItemStart, ListItemText, ListItemTextSecondary } fr
 import { Mobile, YTImg } from '../Utils'
 import './SongsList.css'
 
-const Song = ({ id, title, subtitle }) =>
-  <ListItem href={`/play/${id}`} className={'chord-list-item'}>
+const Song = ({ id, title, subtitle, SongSelected }) =>
+  <ListItem
+    href={`/play/${id}`}
+    className={'chord-list-item'}
+    onClick={() => {
+      SongSelected(id)
+    }}>
     {!Mobile && <ListItemStart className={'chord-list-item-img'} img={YTImg(id)} />}
     <ListItemText>
       {title}
@@ -12,9 +17,11 @@ const Song = ({ id, title, subtitle }) =>
     </ListItemText>
   </ListItem>
 
-const SongsList = ({ songs = [] }) =>
+const SongsList = ({ songs = [], SongSelected }) =>
   <List href twoline className={'chord-list'}>
-    {Object.keys(songs).map(key => <Song key={key} id={key} title={songs[key].title} subtitle={songs[key].subtitle} />)}
+    {Object.keys(songs).map(key =>
+      <Song key={key} id={key} SongSelected={SongSelected} title={songs[key].title} subtitle={songs[key].subtitle} />
+    )}
   </List>
 
 export default SongsList

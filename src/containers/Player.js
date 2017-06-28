@@ -1,11 +1,12 @@
 import PlayerLayout from '../components/PlayerLayout'
+import { SelectedSong } from '../selectors'
 import { PlayerStatusChanged } from '../actions'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 const mapStateToProps = state => {
   return {
-    song: state.songs['IarsrX60bZw~'],
+    song: SelectedSong(state),
     player: state.player
   }
 }

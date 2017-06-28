@@ -7,10 +7,10 @@ export default {
   },
   player: {
     status: -1,
-    ytid: 'IarsrX60bZw~'
+    ytid: ''
   },
   songs: {
-    'IarsrX60bZw~': {
+    'IarsrX60bZw': {
       title: 'Thalli Pogathey',
       subtitle: 'subtitle',
       chords: [
@@ -23,7 +23,7 @@ export default {
         { id: 7, c: 'G' }
       ]
     },
-    'b876JFQ2dp4~': {
+    'b876JFQ2dp4': {
       title: 'Thalli Pogathey',
       subtitle: 'subtitle',
       chords: [
@@ -36,7 +36,7 @@ export default {
         { id: 7, c: 'G' }
       ]
     },
-    'AxoZv5KTsSA~': {
+    'AxoZv5KTsSA': {
       title: 'Achcham Yenbadhu Madamaiyada -Thalli Pogathey',
       subtitle: 'subtitle',
       chords: [
@@ -49,7 +49,7 @@ export default {
         { id: 7, c: 'G' }
       ]
     },
-    'k6co-F5XjKw~': {
+    'k6co-F5XjKw': {
       title: 'Thalli Pogathey Official',
       subtitle: 'subtitle',
       chords: [

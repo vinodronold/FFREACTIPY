@@ -1,21 +1,18 @@
 import SongsList from '../components/SongsList'
+import { SongSelected } from '../actions'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-const mapStateToProps = state => {
-    return ({
-        songs: state.songs
-    }
-)
-}
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         toggleDrawer: () => {
-//             dispatch(toggleDrawer)
-//         }
-//     }
-// }
+const mapStateToProps = state => ({
+  songs: state.songs
+})
 
-const Songs = withRouter(connect(mapStateToProps, null)(SongsList))
+const mapDispatchToProps = dispatch => ({
+  SongSelected: id => {
+    dispatch(SongSelected(id))
+  }
+})
+
+const Songs = withRouter(connect(mapStateToProps, mapDispatchToProps)(SongsList))
 
 export default Songs

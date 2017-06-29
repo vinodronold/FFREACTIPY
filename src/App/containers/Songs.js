@@ -8,9 +8,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  SongSelected: id => {
-    dispatch(SongSelected(id))
-  }
+  SongSelected: id => dispatch(SongSelected(id))
 })
 
 const Songs = withRouter(connect(mapStateToProps, mapDispatchToProps)(SongsList))

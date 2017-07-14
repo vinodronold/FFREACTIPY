@@ -1,5 +1,5 @@
 import ToggleDrawer from './ToggleDrawer'
 import ToggleMoreOptions from './ToggleMoreOptions'
-import PlayerStatusChanged from './PlayerStatus'
-import SongSelected from './SongSelected'
-export { ToggleDrawer, ToggleMoreOptions, PlayerStatusChanged, SongSelected }
+import PlayerStatusChanged from './PlayerStatusChanged'
+import GetSong from './GetSong'
+export { ToggleDrawer, ToggleMoreOptions, PlayerStatusChanged, GetSong }

@@ -42,9 +42,16 @@ const DisplayChord = ({ c, pulse = false, active = false }) =>
   </Paper>
 
 class PlayerLayout extends Component {
+  componentDidMount() {
+    const { match, player, GetSong } = this.props
+    if (!player.ytid) {
+      GetSong(match.params.id)
+    }
+  }
+
   render() {
     const { song, match, player, PlayerStatusChanged } = this.props
-    return player.ytid
+    return song
       ? <div>
           <DisplayTitle title={song.title} subtitle={song.subtitle} />
           <DisplayControl status={player.status} PlayerStatusChanged={PlayerStatusChanged} />
